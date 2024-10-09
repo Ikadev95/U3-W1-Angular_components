@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <header></header>
-<main>
-  <div class="card">
+<main class="container">
+  <div class="card border-0 py-2">
     <div class="card-body">
       <h5 class="card-title">{{titleHeader}}</h5>
       <p class="card-text">{{bodyHeader}}</p>
@@ -11,14 +11,14 @@
   </div>
   <section>
     <div class="container mt-3">
-      <div class="row row-gap-2">
-        <div *ngFor="let singlePost of post" class="col-6">
+      <div class="row row-gap-3">
+        <div *ngFor="let singlePost of post" class="col-md-6 col-12">
           <div  class="card">
             <div class="card-body">
               <h5 class="card-title">{{singlePost.title}}</h5>
-              <p class="card-text">{{singlePost.body}}</p>
-              <p>{{singlePost.tags}}</p>
-              <a href="#" class="btn btn-primary">View more</a>
+              <p class="card-text truncate-multi-line">{{singlePost.body}}</p>
+              <p>Tags: {{singlePost.tags}}</p>
+              <a href="#" class="sm-btn btn-outline-secondary">View more</a>
             </div>
           </div>
         </div>
