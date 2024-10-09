@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Post} from '../post.js'
+import { Post } from '../../Models/post';
+import { iResponse } from '../../Models/response';
+
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,7 @@ export class HomeComponent {
   tagsHeader: Array<string> = []
   ngOnInit(){ // caricamento del componente
     fetch('./assets/db.json')
-    .then((res)=>res.json())
+    .then((res)=><Promise<iResponse>>res.json())
     .then((dati)=>{
       //console.log(dati.posts);
       this.titleHeader = dati.posts[0].title
