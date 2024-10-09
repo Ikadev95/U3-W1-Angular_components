@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
-<header></header>
 <main class="container">
-  <div class="card border-0 py-2">
+  <h2 class="ps-3 mt-3">Featured post</h2>
+  <div class="card border-0 pb-2">
     <div class="card-body">
       <h5 class="card-title">{{titleHeader}}</h5>
       <p class="card-text">{{bodyHeader}}</p>
@@ -9,11 +9,12 @@
       <a href="#" class="btn btn-primary">View more</a>
     </div>
   </div>
-  <section>
+  <section class="mb-5">
+    <h3 class="ps-3 mt-3">You might also like..</h3>
     <div class="container mt-3">
       <div class="row row-gap-3">
         <div *ngFor="let singlePost of post" class="col-md-6 col-12">
-          <div  class="card">
+          <div  class="card shadow">
             <div class="card-body">
               <h5 class="card-title">{{singlePost.title}}</h5>
               <p class="card-text truncate-multi-line">{{singlePost.body}}</p>
